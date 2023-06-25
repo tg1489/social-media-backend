@@ -170,7 +170,7 @@ exports.deleteThoughtById = async (req, res) => {
     if (!deleteThought) {
       console.log("Thought doesn't exist or has already been deleted.");
     }
-    res.json(deleteThought);
+    res.json({ message: 'Thought successfully deleted.' });
   } catch (err) {
     res.status(500).json(err);
   }
